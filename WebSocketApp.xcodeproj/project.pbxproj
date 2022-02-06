@@ -11,6 +11,8 @@
 		4938854727AC561000898C5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938854627AC561000898C5D /* ContentView.swift */; };
 		4938854927AC561300898C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4938854827AC561300898C5D /* Assets.xcassets */; };
 		4938854C27AC561300898C5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4938854B27AC561300898C5D /* Preview Assets.xcassets */; };
+		4938855427AC58B500898C5D /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4938855327AC58B500898C5D /* SocketIO */; };
+		4938855627AC58F200898C5D /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938855527AC58F200898C5D /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		4938854627AC561000898C5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4938854827AC561300898C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4938854B27AC561300898C5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4938855527AC58F200898C5D /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4938855427AC58B500898C5D /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				4938854427AC561000898C5D /* WebSocketAppApp.swift */,
+				4938855527AC58F200898C5D /* SocketService.swift */,
 				4938854627AC561000898C5D /* ContentView.swift */,
 				4938854827AC561300898C5D /* Assets.xcassets */,
 				4938854A27AC561300898C5D /* Preview Content */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = WebSocketApp;
+			packageProductDependencies = (
+				4938855327AC58B500898C5D /* SocketIO */,
+			);
 			productName = WebSocketApp;
 			productReference = 4938854127AC561000898C5D /* WebSocketApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 4938853827AC561000898C5D;
+			packageReferences = (
+				4938855227AC58B500898C5D /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 4938854227AC561000898C5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			files = (
 				4938854727AC561000898C5D /* ContentView.swift in Sources */,
 				4938854527AC561000898C5D /* WebSocketAppApp.swift in Sources */,
+				4938855627AC58F200898C5D /* SocketService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4938855227AC58B500898C5D /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4938855327AC58B500898C5D /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938855227AC58B500898C5D /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4938853927AC561000898C5D /* Project object */;
 }

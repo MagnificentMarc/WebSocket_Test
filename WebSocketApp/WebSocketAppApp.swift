@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SocketIO
 
 @main
 struct WebSocketAppApp: App {
